@@ -1,0 +1,26 @@
+header
+	h1 
+		text-align: center
+		& > a
+			color: $default
+			font-family: 'Roboto Slab', serif
+			text-transform: uppercase
+			&:hover, &:active, &:visited
+				color: lighten($default, 5%)
+				text-decoration: none
+	.dropdown-menu
+		a
+			background-color: transparent !important
+		&.default
+			background-color: $default !important
+			&:hover
+				background-color: lighten($default, 10%) !important
+			&:active
+				background-color: lighten($default, 20%) !important
+		&.primary
+			background-color: $primary !important
+			&:hover
+				background-color: lighten($primary, 10%) !important
+			&:active
+				background-color: lighten($primary, 20%) !important
+

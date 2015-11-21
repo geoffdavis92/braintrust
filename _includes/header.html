@@ -1,0 +1,31 @@
+<header class="site-header">
+    <div class="wrapper">
+        <h1><a class="no-style" href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+        <nav class="top btn-group btn-group-justified">
+                <!-- {% for category in site.categories %}
+                <div class="nav--item dropdown">
+                    <a class="btn btn-sm btn-default" href="{{ category | first | prepend: site.baseurl }}">{{ category | first }}</a><a href="#" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                    <ul class="dropdown-menu default">
+                        {% assign _category = category | slice: -1, 1 %} {% for info in _category %} {% for post in info %} {% if post.title != "" %}
+                        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                        {% endif %} {% endfor %} {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %} -->
+                {% for category in site.data.categories.categories %}
+                    <div class="nav--item dropdown">
+                        <a href="" class="btn btn-sm btn-default" href="{{ category.title | prepend: site.baseurl }}">
+                            {{ category.title }}
+                        </a>
+                        <a href="#" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                        <ul class="dropdown-menu default">
+                            {% for subcategory in category.subcategories %}
+                                <li><a href="{{ subcategory.title }}">{{ subcategory.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                        </a>
+                    </div>
+                {% endfor %}
+        </nav>
+    </div>
+</header>

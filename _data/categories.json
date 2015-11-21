@@ -1,0 +1,21 @@
+{
+		"categories": [
+			{
+				"title": "computer science",
+				"subcategories": [
+					{ "title": "web dev" },
+					{ "title": "software dev" },
+					{ "title": "data analysis" },
+					{ "title": "IT" }
+				]
+			},
+			{
+				"title": "psychology",
+				"subcategories": [
+					{ "title": "clinical" },
+					{ "title": "child" },
+					{ "title": "research" }
+				]
+			}
+		]
+}

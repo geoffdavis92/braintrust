@@ -1,0 +1,26 @@
+$default : #333
+$primary : red
+
+$colors : ('default','primary')
+@each $color in $colors
+	.text-#{$color}
+		@if $color == 'default'
+			color: $default
+		@else if $color == 'primary'
+			color: $primary
+	.bg-#{$color}, .btn-#{$color}
+		@if $color == 'default'
+			background-color: $default !important
+		@else if $color == 'primary'
+			background-color: $primary !important
+	.btn-#{$color}
+		&:hover
+			@if $color == 'default'
+				background-color: darken($default, 10%) !important
+			@else if $color == 'primary'
+				background-color: darken($primary, 10%) !important
+		&:active, &:focus
+			@if $color == 'default'
+				background-color: darken($default, 20%) !important
+			@else if $color == 'primary'
+				background-color: darken($primary, 20%) !important
